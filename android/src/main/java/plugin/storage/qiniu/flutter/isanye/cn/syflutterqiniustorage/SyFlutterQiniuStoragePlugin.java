@@ -79,7 +79,6 @@ public class SyFlutterQiniuStoragePlugin implements MethodCallHandler,EventChann
       .connectTimeout(10)           // 链接超时。默认10秒
       .useHttps(true)               // 是否使用https上传域名
       .responseTimeout(60)          // 服务器响应超时。默认60秒
-      .zone(AutoZone.autoZone)        // 设置区域，指定不同区域的上传域名、备用域名、备用IP。
       .build();
     // 重用uploadManager。一般地，只需要创建一个uploadManager对象
     UploadManager uploadManager = new UploadManager(config);
